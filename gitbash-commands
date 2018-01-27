@@ -1,0 +1,65 @@
+git config --global user.name "name"   			create a username  ..global means settings for this user.
+git config --global user.email "emailid"		creates an emailid for the user
+git config --list								gies the list of git config
+clear											clears the screen
+git help 										gives the help menu
+git help menuitem								opens a web page with the help for the given menuitem like commit etc.
+pwd												gives the current diretory
+cd ~											gives the home diretory
+cd ..											just like in cmd.goes back a folder
+ls												lists all the folders
+git init										Intitializes the empty .git repository int the current directory.
+												always go to the directory of the destination repository/file
+ls -la											gives the hidden files that contains the inof about our repository
+*Commit
+git add .										lets git know that we have changed the stuff(like a staging area between local file and repository
+													and lets git commit on added files)
+git add filename								just like git add . but adds only the file specified													
+											
+git commit -m "This is commit 1"				commits and creates a new version with the information type in as a message
+git log											gives the information about the commits of all authors
+git log --author="bharath"						gives the information about the commits by the author that have bharath in their name
+git status										gives the status of unadded and uncommited files on the local working area
+editing	(not a command)							after editing a file add it and commit it to save the current version and delete the older file on the repository
+												can edit multiple files on the repo by add and commit commands.
+git diff  										differences between working area and staging area (not working area and repository)
+git diff --staged 								differences between staging area and repository
+git diff HEAD 									differences between working area and repository
+git rm filename									removes the file on both working area and the repository.Youstillhavetocommit to have the snapshot of this version
+git mv file1 file2								file1 renamed as file2.Not if you rename it on working dir,git thinks the file1 is deleted and file2 is added.
+												inorder to git know the rename  event remove the file1 using rm command.
+git mv file1 Folder1/file2						just as above but moves the file1 to folder1 and renames is file2	
+git commit -am "meassage"						commits the working directory directly to the repo avoiding the staging area
+												Only use for minor changes only
+git checkout -- index.html						this takes the index.html from repo and replaces the one in WDirectory
+git reset head filename							unstages from the staging area
+git checkout lognumber	filename				this command brings the previous version of the file from the lognumber and puts it in staging area
+for more undo operations in git bash			https://github.com/blog/2019-how-to-undo-almost-anything-with-git
+GITHUB
+git remote add nickname urlofourgithubrepo		this addsa nickame for he url which we get from creating a new project(w/o inti the readme) on Github.
+git remote										gives all the nicknames of url of github repos we configure using the above command
+git push -u nickname master						pushes all the git repo onto the github repo loacted on the nickname url
+
+GITHUB DESKTOP GUI
+Clone repos from your github account to your local directory
+make come changes.
+You can create a .gitignore file and include directories in your repos you want github gui to ignore.
+you can commit and publish them back to the github repo using the app
+
+branches.
+you can create a new branch in the scroll menu of master branch and make changes and submit it to master branch of your/others profile to be merged or deleted
+by maste branch owner
+
+whenever you select a file on github
+RAW:Gives the raw text without all the html edits that git puts so that we can copy and paste easily
+Blame:has the comments made by user modifying the piece of code.
+History:Has the history of the changes made to tha file
+
+For any project
+Watch/unwatch:Gives notifications of the project
+Star/Unstar:saves it on to your starred menu for you to see when you want to
+Fork:is like creating a new branch making changes and pulling requests
+
+Issues:
+we can create new issues and have information on it and have the sample code like in stackexhange.We can directly copy paste the images.
+We can set the issue to a specific person and there are tags to help know what kind of issue it is.
